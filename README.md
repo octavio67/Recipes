@@ -50,7 +50,7 @@ The application performs a Crud of a database table with images.
 - Now you have your app running in Frontend.
 ![frontendrecipes](https://user-images.githubusercontent.com/57419892/199983682-da5bb992-49e6-4113-8730-633d782c271b.JPG)
 
-
+- App running
 ![image](https://user-images.githubusercontent.com/57419892/199991192-ed115f5c-99b3-40ec-b13d-96453888db8d.png)
 
           
