@@ -61,12 +61,6 @@ https://documenter.getpostman.com/view/23300733/2s8YYCt52Y
 ![image](https://user-images.githubusercontent.com/57419892/199984487-f8dfcada-311b-4830-9454-219f22f8900d.png)
 
 
-
-<<<<<<< HEAD
-***NOTES***
-=======
 ***NOTES***
 
 
-
->>>>>>> d27689eee094ed78b874d8ac4f503595ee6c4077
