@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recipe List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let recipe of recipes">
+      <ion-avatar slot="start">
+        <img *ngIf="recipe.filename" src="http://localhost:8080/images/{{recipe.filename}}" alt="image"/>
+      </ion-avatar>
+      <ion-label>
+        <h1>{{recipe.name}}</h1>
+        <p>{{recipe.category}}</p>
+
+        <ion-buttons>
+          <ion-button color="danger" (click)="deleteRecipe(recipe.id)">
+            <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+          </ion-button>
+          <ion-button color="secondary" (click)="updateRecipe(recipe.id)">
+            <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addRecipe()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Delete All
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>Esto borrará todo el contenido de la base de datos</p>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="deleteAllRecipes()">
+      <ion-icon name="skull-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

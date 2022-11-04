@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Recipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="6">
+        
+          <img src="http://localhost:8080/images/{{imageSaved}}" alt="image"/>
+          
+      </ion-col>
+      <ion-col size="6">
+        <ion-button color="primary" fill="outline" (click)="takePhoto()">
+          <ion-icon slot="start" name="camera-outline"></ion-icon>
+          Take a photo
+        </ion-button>
+        <ion-button color="primary" fill="outline" (click)="pickImage()">
+          <ion-icon slot="start" name="image-outline"></ion-icon>
+          Pick an image
+        </ion-button>
+        <ion-button color="danger" fill="outline" (click)="discardImage()">
+          <ion-icon slot="start" name="aperture"></ion-icon>
+          Discard image
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+  
+  <form [formGroup]="updateRecipeForm" (ngSubmit)="onSubmit()" novalidate>
+    <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name" type="text" required></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">Name is required.</span>
+    <ion-item lines="full">
+      <ion-label position="floating">Category</ion-label>
+      <ion-input formControlName="category" type="text" required></ion-input>
+    </ion-item>
+    
+     
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.category.errors?.required">Category is required.</span>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block">Update</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  
+</ion-content>
