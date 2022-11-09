@@ -28,7 +28,7 @@ The application performs a Crud of a database table with images.
 
 - cd existing_folder
 
-- git clone --branch master https://github.com/octavio67/Recipes.git
+- git clone --branch main https://github.com/octavio67/Recipes.git
 
 - them you get a 'Recipes' folder that contains 'backend' and 'frontend' folders
 
